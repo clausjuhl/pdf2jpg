@@ -4,8 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+"pdf2jpg" = "*"
+"pypdf2" = "*"
+pymupdf = "*"
 
 [dev-packages]
+pylint = "*"
 
 [requires]
 python_version = "3.6"
