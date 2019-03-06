@@ -1,6 +1,6 @@
 #! python
 '''
-This demo extracts and saves first image of the first page of a PDF.
+This demo extracts and saves first image of the first page of an imagebased PDF.
 
 If an image has no /SMask entry, it is stored using the raw image buffer -
 i.e. not necessarily as a PNG file.
@@ -47,6 +47,7 @@ print("file: %s, pages: %s, objects: %s" % (sys.argv[1], len(doc), lenXREF-1))
 imglist = doc.getPageImageList(0)  # list of images used by the first page
 img = imglist[0]  # first image on first page
 pix = recoverpix(doc, img[:2]) # make pixmap from image
+# imgfile = "p%i-%i" % (0, img[0])
 imgfile = "p%i-%i" % (0, img[0])
 
 if type(pix) is not fitz.Pixmap:  # a raw image buffer
