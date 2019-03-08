@@ -1,11 +1,16 @@
 #! python
 '''
+20190307 - succesfully converted all 7568 PR-pdfs to images!
+    All pdf-links where extracted from the PR_#_deployed.csv-files in the
+    workflows/csv-files folder
+
 This script extracts and saves first image of the first page of an imagebased PDF.
 
 If an image has no /SMask entry, it is stored using the raw image buffer -
 i.e. not necessarily as a PNG file.
 If the image has an /SMask entry, it is processed using PyMuPDF pixmaps.
 '''
+
 from __future__ import print_function
 import fitz
 import sys
